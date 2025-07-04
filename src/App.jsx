@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignInPage from "./pages/auth/SignInPage";
+import SignUpPage from "./pages/auth/SignUpPage";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-red-500 font-playful">this is the heading</h1>
-      <h6 className="text-green-400 font-lato">this the body</h6>
-      <h1>this is the default</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SignInPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        playful: ["Playfair Display"],
+        playfair: ["Playfair Display"],
         lato: ["Lato"],
       },
     },
