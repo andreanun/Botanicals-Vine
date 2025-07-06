@@ -1,0 +1,27 @@
+import AuthForm from "./AuthForm";
+
+const SignUpPage = () => {
+  return (
+    <div className="flex items-center justify-center">
+      <AuthForm
+        fields={[
+          {
+            label: "username",
+            type: "text",
+          },
+          {
+            label: "password",
+            type: "password",
+          },
+          {
+            label: "confirm password",
+            type: "password",
+          },
+        ]}
+        submitButtonLabel="create an account"
+      />
+    </div>
+  );
+};
+
+export default SignUpPage;
