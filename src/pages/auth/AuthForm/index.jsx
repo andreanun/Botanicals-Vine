@@ -2,7 +2,7 @@ import { useState } from "react";
 import Field from "./Field";
 
 const AuthForm = (props) => {
-  const { fields, submitButtonLabel } = props;
+  const { fields, submitButtonLabel, onSubmit } = props;
   const [fieldValues, setFieldValues] = useState(() => {
     const initialState = {};
     for (let field of fields) {
@@ -12,7 +12,13 @@ const AuthForm = (props) => {
   });
 
   return (
-    <form className="p-4 m-4 font-lato bg-white border border-slate-300 rounded-lg">
+    <form
+      className="p-4 m-4 font-lato bg-white border border-slate-300 rounded-lg"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(fieldValues);
+      }}
+    >
       {fields.map((field) => (
         <Field
           key={field.label}
