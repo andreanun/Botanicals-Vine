@@ -2,11 +2,13 @@ import AuthForm from "./AuthForm";
 import FormContainer from "./AuthForm/FormContainer";
 import { Link, useLocation } from "react-router-dom";
 import * as userService from "services/user";
-import { useState } from "react";
+import SessionContext from "contexts/SessionContext";
+import { useState, useContext } from "react";
 
 const SignInPage = () => {
   const [error, setError] = useState("");
   const location = useLocation();
+  const sessionContext = useContext(SessionContext);
 
   return (
     <FormContainer>
@@ -29,17 +31,17 @@ const SignInPage = () => {
         ]}
         submitButtonLabel="sign in"
         onSubmit={async (values) => {
-          //console.log(values);
           const response = await userService.createSession({
             username: values.username,
             password: values.password,
           });
 
+          const data = await response.json();
           if (response.status === 201) {
-            console.log("Sign in successful");
+            sessionContext.signIn(data.session_token);
+            data.session_token;
             setError("");
           } else {
-            const data = await response.json();
             setError(data.error);
           }
         }}
