@@ -11,8 +11,6 @@ const App = () => {
     userService.getSessionTokenStorage()
   );
 
-  console.log(jwtDecode(sessionToken));
-
   return (
     <SessionContext.Provider
       value={{
@@ -31,7 +29,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
-          <Route />
         </Routes>
       </BrowserRouter>
     </SessionContext.Provider>
