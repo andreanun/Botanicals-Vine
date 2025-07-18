@@ -11,3 +11,14 @@ export const createSession = ({ username, password }) =>
     username,
     password,
   });
+
+const SESSION_STORAGE_KEY = "session_key";
+
+export const setSessionTokenStorage = (sessionToken) =>
+  localStorage.setItem(SESSION_STORAGE_KEY, sessionToken);
+
+export const getSessionTokenStorage = () =>
+  localStorage.getItem(SESSION_STORAGE_KEY);
+
+export const removeSessionTokenStorage = () =>
+  localStorage.removeItem(SESSION_STORAGE_KEY);
