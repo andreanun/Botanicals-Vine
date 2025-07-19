@@ -12,7 +12,7 @@ export const createSession = ({ username, password }) =>
     password,
   });
 
-const SESSION_STORAGE_KEY = "session_key";
+const SESSION_STORAGE_KEY = "session_token";
 
 export const setSessionTokenStorage = (sessionToken) =>
   localStorage.setItem(SESSION_STORAGE_KEY, sessionToken);
