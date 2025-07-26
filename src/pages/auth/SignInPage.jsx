@@ -40,9 +40,9 @@ const SignInPage = () => {
 
             const data = await response.json();
             if (response.status === 201) {
-              sessionContext.signIn(data.session_token);
-              data.session_token;
+              sessionContext.signIn(data.capstone_session_token);
               setError("");
+              console.log(data.session_token);
             } else {
               setError(data.error);
             }
