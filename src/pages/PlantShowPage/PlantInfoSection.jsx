@@ -1,5 +1,6 @@
 import PlantHeading from "./PlantHeading";
 import BenefitBox from "./BenefitBox";
+import PlantPurchaseOptions from "pages/PlantListPage/PlantPurchaseOptions";
 
 const PlantInfoSection = (props) => {
   const { plant } = props;
@@ -32,6 +33,7 @@ const PlantInfoSection = (props) => {
         <p className="leading-relaxed mt-4 text-slate-600">
           {plant.description}
         </p>
+        <PlantPurchaseOptions plant={plant} />
       </div>
     </div>
   );
