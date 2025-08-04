@@ -35,7 +35,7 @@ const PlantInfoSection = (props) => {
         <div className="hidden md:block">
           <PlantHeading plant={plant} />
         </div>
-        <p className="leading-relaxed mt-4 text-slate-600">
+        <p className="leading-relaxed mt-6 text-slate-600">
           {plant.description}
         </p>
         <PlantPurchaseOptions
