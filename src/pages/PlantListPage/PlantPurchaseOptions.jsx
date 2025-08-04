@@ -1,6 +1,7 @@
 import { POT_COLORS } from "shared-components/util";
 import { useState } from "react";
 import clsx from "clsx";
+import * as cartService from "services/cart";
 
 const PlantPurchaseOptions = (props) => {
   const { plant, imageIndex, setImageIndex } = props;
@@ -60,7 +61,17 @@ const PlantPurchaseOptions = (props) => {
             <i className="fa-solid fa-plus"></i>
           </button>
         </div>
-        <button className="flex flex-1 ml-2 justify-center items-center rounded-full bg-emerald-700 text-white text-xl hover:bg-emerald-800">
+        <button
+          className="flex flex-1 ml-2 justify-center items-center rounded-full bg-emerald-700 text-white text-xl hover:bg-emerald-800"
+          onClick={async () => {
+            const response = await cartService.addPlantToCart({
+              quantity,
+              plantId: plant.id,
+              potColor: plant.images[imageIndex].pot_color,
+            });
+            console.log(response.status);
+          }}
+        >
           <i className="mr-1 fa-solid fa-cart-plus text-2xl"></i>
           add to cart
         </button>
