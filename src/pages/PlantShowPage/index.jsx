@@ -1,4 +1,4 @@
-import NavBar from "shared-components/NavBar";
+import NavBar from "shared-components/NavBar/index.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import * as plantService from "services/plant";

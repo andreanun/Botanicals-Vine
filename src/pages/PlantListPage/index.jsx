@@ -1,4 +1,4 @@
-import NavBar from "shared-components/NavBar";
+import NavBar from "shared-components/NavBar/index.jsx";
 import RedirectToSignedInIfSignedOut from "shared-components/RedirectToPlantsIfSignedInIfSignedOut";
 import { useEffect, useState } from "react";
 import * as plantService from "services/plant";
