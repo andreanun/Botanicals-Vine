@@ -2,6 +2,7 @@ import SessionContext from "contexts/SessionContext";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import CartModal from "./modals/CartModal";
+import ModalWrapper from "./modals/CartModal/ModalWrapper";
 
 const NavBar = () => {
   const { username, signOut } = useContext(SessionContext);
@@ -25,7 +26,7 @@ const NavBar = () => {
               Botanicals & Vine
             </div>
           </Link>
-          <div className=" flex flex-1 justify-end">
+          <div className="hidden sm:flex flex-1 justify-end">
             <div className="relative min-w-32">
               <button
                 className="text-emerald-200 flex items-center"
@@ -53,9 +54,16 @@ const NavBar = () => {
               <i className="fa-solid fa-cart-shopping mr-2 text-xl"></i>
             </button>
           </div>
+          <button className="flex sm:hidden">
+            <i className="fa-solid fa-bars text-4xl text-emerald-400"></i>
+          </button>
         </div>
       </nav>
-      {cartOpen && <CartModal setCartOpen={setCartOpen} />}
+      {cartOpen && (
+        <ModalWrapper isOpen={cartOpen} onCloseClick={() => setCartOpen(false)}>
+          <CartModal setCartOpen={setCartOpen} />
+        </ModalWrapper>
+      )}
     </>
   );
 };
