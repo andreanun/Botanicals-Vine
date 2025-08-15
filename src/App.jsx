@@ -7,6 +7,7 @@ import SessionContext from "contexts/SessionContext";
 import { jwtDecode } from "jwt-decode";
 import PlantListPage from "pages/PlantListPage/index";
 import PlantShowPage from "pages/PlantShowPage";
+import ScrollToTop from "shared-components/ScrollToTop";
 
 const App = () => {
   const [sessionToken, setSessionToken] = useState(() =>
@@ -28,6 +29,7 @@ const App = () => {
       }}
     >
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
