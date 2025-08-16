@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import * as plantService from "services/plant";
 import PlantItem from "./PlantItem";
 import LoadingSpinner from "shared-components/LoadingSpinner";
+import { motion } from "framer-motion";
 
 const PlantListPage = () => {
   const [plants, setPlants] = useState([]);
@@ -34,7 +35,15 @@ const PlantListPage = () => {
               </div>
               <div className="flex flex-wrap justify-center">
                 {plants.map((plant, idx) => (
-                  <PlantItem key={plant.name} plant={plant} />
+                  <motion.div
+                    key={plant.name}
+                    initial={{ opacity: 0, translateY: "20px" }}
+                    whileInView={{ opacity: 1, translateY: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + (idx % 3) * 0.2, duration: 0.4 }} //creates staggered pattern delay
+                  >
+                    <PlantItem plant={plant} />
+                  </motion.div>
                 ))}
               </div>
             </div>
