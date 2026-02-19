@@ -26,12 +26,12 @@ A robust onboarding flow that handles both success and failure states gracefully
 - **Session Management:** Persists user login state across reloads.
 - **Real-time Validation:** Provides immediate visual feedback for incorrect credentials or formatting errors.
 
-|                               Sign Up Success                                |                                   Login Error Handling                                   |
-| :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
-| <img src="./assets/sign_up_success.png" width="400" alt="Sign Up Success" /> | <img src="./assets/incorrect_username.png" width="400" alt="Incorrect Username Error" /> |
+|                                Sign Up Success                                 |                                    Login Error Handling                                    |
+| :----------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+| <img src="src/assets/sign_up_success.png" width="400" alt="Sign Up Success" /> | <img src="src/assets/incorrect_username.png" width="400" alt="Incorrect Username Error" /> |
 
 > **Validation Logic:**
-> <img src="./assets/sign-up-error.png" alt="Form Validation" />
+> <img src="src/assets/sign-up-error.png" alt="Form Validation" />
 > _Prevents submission of invalid data to ensure backend integrity._
 
 ---
@@ -43,7 +43,7 @@ A high-performance grid layout that fetches and displays plant data dynamically.
 - **Responsive Grid:** Adapts from mobile (1 col) to desktop (4 cols) using Tailwind breakpoints.
 - **Visual Hierarchy:** Prioritizes high-quality imagery with clear pricing and naming conventions.
 
-![Main Plant Catalog](./assets/plant_page.png)
+![Main Plant Catalog](src/assets/plant_page.png)
 
 ---
 
@@ -54,13 +54,13 @@ The application handles complex product logic, such as selecting specific pot co
 - **Product Details:** Dedicated views for care instructions and specifications.
 - **State Logic:** The cart differentiates between a _Blue Star Fern (Terracotta)_ and a _Blue Star Fern (White)_, treating them as unique line items.
 
-![Single Plant Page](./assets/single_plant_page.png)
+![Single Plant Page](src/assets/single_plant_page.png)
 
 > **Live Cart Demo:**
 >
 > _Users can customize their order and see the cart update instantly._
 >
-> ![Add to Cart Interaction](./assets/add_blue_to_cart.mp4)
+> ![Add to Cart Interaction](src/assets/add_blue_to_cart.mp4)
 > _(Note: If video does not play, please view in `assets/add_blue_to_cart.mp4`)_
 
 ---
