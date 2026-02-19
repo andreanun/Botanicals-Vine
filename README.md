@@ -1,38 +1,66 @@
 # Botanicals & Vine ~
 
-For my home plant lovers. A frontend project showcasing a proof of concept of a e-commerce web application folks to shop for home plants. This is simply a MVP, more features coming soon :) .
+For my home plant lovers. This frontend project serves as a comprehensive **Proof of Concept (PoC)** for a digital plant e-commerce shop. This is simply a MVP, more features coming soon :) .
 
-### Description and Purpose
+---
 
-[text goes here]
+## 🛠️ Tech Stack
 
-## Tech Stack
+| Category             | Technology                             |
+| :------------------- | :------------------------------------- | ------------ |
+| **Framework**        | React (Vite)                           |
+| **Styling**          | Tailwind CSS                           | Google Fonts |
+| **State Management** | React Hooks (Context API)              |
+| **Testing**          | Vitest, React Testing Library, Cypress |
+| **Icons**            | Font Awesome                           |
+| **Version Control**  | Git / GitHub                           |
 
-- React, JavaScript, Tailwind CSS, Font Awesome,
+---
 
-## Features
+## ✨ Key Features
 
-### [Name of Feature 1]
+### 🔐 Authentication & Error Handling
 
-- User should be able to sign in.
-- Appropriate error handling and validation for incorrect username/password.
+A robust onboarding flow that handles both success and failure states gracefully.
 
-[gif goes here]
+- **Session Management:** Persists user login state across reloads.
+- **Real-time Validation:** Provides immediate visual feedback for incorrect credentials or formatting errors.
 
-### [Name of Feature 2]
+|                               Sign Up Success                                |                                   Login Error Handling                                   |
+| :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
+| <img src="./assets/sign_up_success.png" width="400" alt="Sign Up Success" /> | <img src="./assets/incorrect_username.png" width="400" alt="Incorrect Username Error" /> |
 
-[short description goes here]
+> **Validation Logic:**
+> <img src="./assets/sign-up-error.png" alt="Form Validation" />
+> _Prevents submission of invalid data to ensure backend integrity._
 
-[gif goes here]
+---
 
-### [Name of Feature 3]
+### 🍃 The Greenhouse (Catalog)
 
-[short description goes here]
+A high-performance grid layout that fetches and displays plant data dynamically.
 
-[gif goes here]
+- **Responsive Grid:** Adapts from mobile (1 col) to desktop (4 cols) using Tailwind breakpoints.
+- **Visual Hierarchy:** Prioritizes high-quality imagery with clear pricing and naming conventions.
 
-### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
+![Main Plant Catalog](./assets/plant_page.png)
 
-## Installation Instructions
+---
 
-[instructions go here]
+### 🛒 Custom Shopping Experience
+
+The application handles complex product logic, such as selecting specific pot colors for the same plant species.
+
+- **Product Details:** Dedicated views for care instructions and specifications.
+- **State Logic:** The cart differentiates between a _Blue Star Fern (Terracotta)_ and a _Blue Star Fern (White)_, treating them as unique line items.
+
+![Single Plant Page](./assets/single_plant_page.png)
+
+> **Live Cart Demo:**
+>
+> _Users can customize their order and see the cart update instantly._
+>
+> ![Add to Cart Interaction](./assets/add_blue_to_cart.mp4)
+> _(Note: If video does not play, please view in `assets/add_blue_to_cart.mp4`)_
+
+---
