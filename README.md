@@ -60,7 +60,7 @@ The application handles complex product logic, such as selecting specific pot co
 >
 > _Users can customize their order and see the cart update instantly._
 >
-> ![Add to Cart Interaction](src/assets/add_blue_to_cart.mp4)
+> ![Add to Cart Interaction](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWhsdmVzNjhka2R3cDdnY3ZpYWZreWdvd29pZjcwa29semJlejUxeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ttNAT8fIcpQohD0Hms/giphy.gif)
 > _(Note: If video does not play, please view in `assets/add_blue_to_cart.mp4`)_
 
 ---
