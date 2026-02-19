@@ -7,9 +7,9 @@ For my home plant lovers. This frontend project serves as a comprehensive **Proo
 ## 🛠️ Tech Stack
 
 | Category             | Technology                             |
-| :------------------- | :------------------------------------- | ------------ |
+| :------------------- | :------------------------------------- |
 | **Framework**        | React (Vite)                           |
-| **Styling**          | Tailwind CSS                           | Google Fonts |
+| **Styling**          | Tailwind CSS, Google Fonts             |
 | **State Management** | React Hooks (Context API)              |
 | **Testing**          | Vitest, React Testing Library, Cypress |
 | **Icons**            | Font Awesome                           |
